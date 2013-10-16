@@ -1,65 +1,75 @@
 # DataCosmos
 
-DataCosmos is an architecture that fosters a respectful and sustainable user/developer
-relationship by separating applications from data.
-
-An ecosystem of apps and user data stores built on DataCosmos would reduce the entry barrier
-for application developers while giving more control to users.
-
-## Design Goals
-
-* Applications know as little as necessary about users.
-* Personal data (passwords, preferences, app data) are stored locally and synced with personal servers.
-* Loosely coupled services.
-* Developers control access to their app.
-* Users control access to their data.
-* Apps work well offline.
+DataCosmos is a reimagining of the internet using the metaphor of the cosmos.
 
 
 ## Overview
 
-The DataCosmos system consists of three types of servers:
+The DataCosmos consists of these types of objects:
 
-1. Nexus - Federated directory of Stars.
-2. Star - Personal data storage and access control.
-3. Belt - Connectors to other services.
-
-
-### Nexus
-
-A federated Star directory service.
-
-Nexus stores the minimum necessary information about users so that their Stars can be located.
-
-Functions:
-
-* connecting users/apps to Stars
-* Star lookup
+1. Star - Center of a star system.
+2. Dust - Small piece of metadata in a star system.
+3. Planet - Large chuck of data in a star system.
+4. Naut - Vessel a human uses to traverse the cosmos.
+5. Nexus - Map of stars in the cosmos.
 
 
 
 ### Star
 
-Stars represent users in the digital world.
-Stars house application data and control access to that data.
-One Star can support multiple users and apps.
+Stars are the powerhouses of the cosmos. They create immense gravity wells around which
+planets and dust orbit. Stars are constantly churning, turning matter into energy and back again.
+The photons of light they create travel the cosmos.
+http://en.wikipedia.org/wiki/Star
 
-Functions:
+A Star in the DataCosmos is a server with the following functions:
 
-* persisting user data (dust)
-* managing access to dust
+* storage - persisting data (dust and planets)
+* processing - running programs
+* protocol - communicating with other stars in the cosmos
 
 
 
+### Dust
 
-### Belt
+Dust are solid particles created in stars and scattered around the cosmos.
+http://en.wikipedia.org/wiki/Cosmic_dust
 
-Belts are the connective tissue between various services and user data stores.
-These servers maintain secret keys, pass auth tokens, etc.
+Dust in the DataCosmos are metadata that are:
 
-Functions:
+* structured - machine readable json
+* content-addressable - their ids are the sha384 hash of their content
+* colored - falls somewhere on the visible light spectrum.
 
-* service connector
+
+
+### Planet
+
+Planets are massive objects that orbit stars.
+http://en.wikipedia.org/wiki/Planet
+
+Planets in the DataCosmos are large binary objects that are:
+
+* content-addressable - their ids are the sha384 hash of their content
+* colored - falls somewhere on the visible light spectrum.
+
+
+
+### Naut
+
+Nauts are the vessels we explorers travel in i.e. our space ships.
+
+Nauts in the DataCosmos are keys that uniquely identify a user.
+
+
+
+### Nexus
+
+Nexus are the maps of the stars in the cosmos. They plot where the stars are, giving us the
+means to navigate the cosmos.
+
+Nexus in the DataCosmos are directory servers for Stars.
+
 
 
 
@@ -68,4 +78,4 @@ Functions:
 
 Example DataCosmos [flows].
 
-[flows]: https://github.com/auggernaut/datacosmos/blob/master/Flows.md
+[flows]: https://github.com/auggernaut/StarTier/blob/master/Flows.md
