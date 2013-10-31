@@ -26,13 +26,13 @@ A Star in the DataCosmos is a server with the following functions:
 
 * storage - persisting data (dust and planets)
 * processing - running programs
-* protocol - communicating with other stars in the cosmos
+* events - communicating with other stars in the cosmos
 
 
 
 ### Dust
 
-Dust are solid particles created in stars and scattered around the cosmos.
+Dust are solid particles floating in the cosmos.
 http://en.wikipedia.org/wiki/Cosmic_dust
 
 Dust in the DataCosmos are metadata that are:
